@@ -13,10 +13,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Java',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'java/einfuehrung' },
-					],
+                    autogenerate: { directory: 'java' },
 				},
 			],
 		}),
