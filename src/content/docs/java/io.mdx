@@ -1,0 +1,45 @@
+---
+title: IO
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+
+## Einlesen einer Datei mit NIO
+
+```java
+public class BufferedReaderExampleNIO {
+    public static void main(String[] args) {
+        Path p = Paths.get("test.txt");
+        try (BufferedReader br = Files.newBufferedReader(p)){
+            while ( br.ready() ) {
+                String line = br.readLine();
+                System.out.println("Line Read: " + line);
+            }
+        } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+```
+
+## Anhängen von Inhalt an eine Datei mit NIO
+
+Das Flag `true` beim der Instanziierung des FileWriter, bestimmt darüber, ob die Datei überschrieben oder an die Datei angehängt werden soll.
+
+```java
+public static void main(String[] args) {
+    File f = new File("test.txt");
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(f, true))) {
+        bw.write("Ich bin die erste Zeile die angehaengt wird");
+        bw.newLine();
+        bw.write("Ich bin die zweite Zeile die angehaengt wird");
+        bw.newLine();
+    } catch (IOException e) {
+    e.printStackTrace();
+    }
+}
+```
+
+<Aside type="note" title="Hinweis">
+    Falls die Datei noch nicht existiert wird sie automatisch erstellt.
+</Aside>
+
