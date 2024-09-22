@@ -1,4 +1,0 @@
----
-title: Datatypes
-tableOfContents: true
----

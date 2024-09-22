@@ -1,0 +1,108 @@
+---
+title: Datatypes
+tableOfContents: true
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+
+## Primitive Datentypen
+
+### Zahlen
+
+#### Byte
+
+Ganzzahl von -128 bis 127
+
+```java
+byte number = 0;
+```
+
+#### Short
+
+Ganzzahl von -32.768 bis 32.767
+
+```java
+short number = 0;
+```
+#### Integer
+
+Ganzzahl von -2.147.483.648 bis 2.147.483.647
+
+```java
+int integer = 0;
+```
+
+#### Long
+
+Ganzzahl von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
+
+```java
+long number = 0;
+```
+
+#### Float
+
+Größe von 4 Bytes
+
+```java
+float number = 0.0f;
+```
+
+#### Double
+
+Größe von 8 Bytes
+
+```java
+double number = 0.0;
+```
+
+### Wahrheitswerte
+
+Wahrheitswerte können entweder wahr (`true`) oder falsch (`false`) sein
+
+```java
+boolean wahrheitswert = true;
+```
+
+### Char
+
+Ein Char speichert ein einzelnes Zeichen ab
+
+```java
+char zeichen = 'A';
+```
+
+### Zeichenketten
+
+In einem String kann Text gespeichert werden. Er besteht im Hintergrund aus einem Array aus Chars, weswegen sein Zeichenlimit gleich dem Integer-Limit ist.
+
+```java
+String zeichenkette = "ASDF";
+```
+
+## Komplexe Datentypen
+
+### Arrays
+
+In einem Array können mehrere Elemente des selben Datentyps gespeichert werden. Ein Array hat eine vordefinierte Größe, die im Nachhinein nicht mehr geändert werden kann.
+
+Hier wird beispielhaft ein Integer-Array der Größe 10 erstellt:
+```java
+int[] integerArray = new int[10];
+```
+
+Hier wird der erste Eintrag des Arrays auf `123` gesetzt:
+```java
+integerArray[0] = 123;
+```
+
+Und hier wird der fünfte Eintrag des Arrays ausgegeben:
+
+```java
+System.out.println(integerArray[4]);
+```
+
+<Aside type="caution" title="Achtung">
+    Es wird stets beginnend mit der 0 gezählt. Das erste Element ist also immer das mit dem Index 0.
+</Aside>
