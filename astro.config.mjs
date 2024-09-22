@@ -6,10 +6,16 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'JavaDoc',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/Lenboxxi/Javadoc',
 			},
+            locales: {
+                root: {
+                    label: 'Deutsch',
+                    lang: 'de',
+                },
+            },
 			sidebar: [
 				{
 					label: 'Java',

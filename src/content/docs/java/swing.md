@@ -1,5 +1,5 @@
 ---
-title: Swing
+title: GUIs mit Swing
 tableOfContents: true
 ---
 ```java
