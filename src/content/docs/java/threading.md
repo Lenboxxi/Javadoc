@@ -1,9 +1,10 @@
 ---
 title: Threading
-tableOfContents: false
+tableOfContents: true
 ---
 
 ## run-Methode
+
 ```java
 class FirstThread extends Thread {
     public void run() {
@@ -27,4 +28,11 @@ public class FirstThreadDemo {
     }
 }
 ```
+
 ![img.png](../../../assets/threading.png)
+
+## Synchronisierung von Threads - join
+
+Die Methode `join()` erlaubt es einem Thread, auf die Beendigung eines anderen Threads (hier: `t`) zu warten.
+Wenn also `t` ein (parallel laufendes) Thread-Objekt ist, sorgt `t.join()` dafür, dass der aktuelle Thread (der, in
+dessen Programmcode diese Zeile steht) so lange pausiert, bis `t` terminiert.
