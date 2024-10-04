@@ -23,22 +23,22 @@ __JFrame, JWindow__ und __JDialog__
 ```java
 import javax.swing.*;
 
-void setTitle(String s); // Title
+setTitle(String s); // Title
 
-void add(Component comp); // Füge Komponente zum Container hinzu
+add(Component comp); // Füge Komponente zum Container hinzu
 
-void setSize(int width, int height);
+setSize(int width, int height);
 
-void pack(); // Fenstergröße wird an die bevorzugte Größe und das Layout der Komponenten angepasst
+pack(); // Fenstergröße wird an die bevorzugte Größe und das Layout der Komponenten angepasst
 
-void setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-void setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-void setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-void setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-void setVisible(boolean b); // Macht das Fenster sichtbar
+setVisible(boolean b); // Macht das Fenster sichtbar
 
-void dispose(); // Gibt alle systemeigenen Ressourcen des Fensters frei
+dispose(); // Gibt alle systemeigenen Ressourcen des Fensters frei
 ```
 
 ## Layoutmanager
@@ -232,4 +232,14 @@ JOptionPane.showConfirmDialog(null, "Are you ok?");
 String[] options = {"to be", "not to be", "dont know"};
 String selection = (String) JOptionPane.showInputDialog(null, "Hamlet", "To be or not to be?", JOptionPane.Question_Message, null, options, options[1]);
 System.out.println("Chosen: " + selection);
+```
+
+## Action Listener für Buttons
+```java
+JButton b = new JButton("Click me!");
+b.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Button clicked!");
+    }
+});
 ```
