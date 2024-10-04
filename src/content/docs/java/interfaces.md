@@ -1,5 +1,5 @@
 ---
-title: Interfaces
+title: Interfaces (Schnittstelle)
 tableOfContents: false
 ---
 

@@ -9,11 +9,36 @@ import { Aside } from '@astrojs/starlight/components';
 ```java
 public class BufferedReaderExampleNIO {
     public static void main(String[] args) {
+        // Datei einlesen
         Path p = Paths.get("test.txt");
         try (BufferedReader br = Files.newBufferedReader(p)){
             while ( br.ready() ) {
+                // Zeile einlesen
                 String line = br.readLine();
+                // Zeile ausgeben
                 System.out.println("Line Read: " + line);
+            }
+        } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+```
+
+## Einlesen einer Datei mit NIO und speichern in einer Liste
+
+```java
+public class BufferedReaderExampleNIO {
+    public static void main(String[] args) {
+        // Liste erstellen
+        private List<String> list = new LinkedList<>();
+        // Datei einlesen
+        Path p = Paths.get("test.txt");
+        try (BufferedReader br = Files.newBufferedReader(p)){
+            while ( br.ready() ) {
+                // Zeile einlesen
+                String line = br.readLine();
+                // Zeile in Liste speichern
+                list.add(line);
             }
         } catch (IOException e) {
         e.printStackTrace();
