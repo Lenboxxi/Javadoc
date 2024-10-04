@@ -31,10 +31,10 @@ setSize(int width, int height);
 
 pack(); // Fenstergröße wird an die bevorzugte Größe und das Layout der Komponenten angepasst
 
-setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 setVisible(boolean b); // Macht das Fenster sichtbar
 
@@ -243,3 +243,54 @@ b.addActionListener(new ActionListener() {
     }
 });
 ```
+
+## Radio Buttons
+```java
+JRadioButton rb1 = new JRadioButton("Option 1");
+JRadioButton rb2 = new JRadioButton("Option 2");
+ButtonGroup bg = new ButtonGroup();
+bg.add(rb1);
+bg.add(rb2);
+```
+
+## Checkboxes
+```java
+JCheckBox cb1 = new JCheckBox("Option 1");
+JCheckBox cb2 = new JCheckBox("Option 2");
+
+if (cb1.isSelected()) {
+    System.out.println("Option 1 selected");
+}
+```
+
+## Inputfelder
+```java
+JTextField tf = new JTextField(20);
+JPasswordField pf = new JPasswordField(20);
+
+String text = tf.getText();
+char[] password = pf.getPassword();
+```
+
+## Listen
+```java
+String[] items = {"Item 1", "Item 2", "Item 3"};
+JList<String> list = new JList<>(items);
+
+// Get selected item
+String selected = list.getSelectedValue();
+
+// Scrollpane
+JScrollPane sp = new JScrollPane(list);
+
+// Add to frame
+frame.add(sp);
+
+// Add listener
+list.addListSelectionListener(new ListSelectionListener() {
+    public void valueChanged(ListSelectionEvent e) {
+        System.out.println("Selected: " + list.getSelectedValue());
+    }
+});
+```
+

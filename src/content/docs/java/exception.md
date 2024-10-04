@@ -7,7 +7,8 @@ tableOfContents: true
 
 Jede Methode, welche einen Fehler werfen kann, muss auch das Keyword `throw` enthalten.
 ```java
-import java.io.IOException;public void openFile(/* ... */) throws IOException {
+import java.io.IOException;
+public void openFile(/* ... */) throws IOException {
     /*
             Hier stehen Anweisungen, die eine nicht 
             abgefangene java.io.IOException 
