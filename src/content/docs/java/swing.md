@@ -294,3 +294,23 @@ list.addListSelectionListener(new ListSelectionListener() {
 });
 ```
 
+## Inhalt aktualisieren
+Um Inhalt zu aktualisieren, kann das entsprechende Element entfernt und neu hinzugefügt werden.
+```java
+// Panel erzeugen
+JPanel panel = new JPanel();
+
+// initiale Anzeige des Inhalts
+content();
+
+// Hinzufügen zum JFrame
+jframe.add(panel);
+
+// Methode zum Aktualisieren des Inhalts
+public void content() {
+    panel.removeAll();
+    panel.add(new JLabel("New content"));
+    panel.revalidate();
+}
+```
+
