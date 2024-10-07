@@ -130,3 +130,35 @@ Hier werden Elemente aus der Arrayliste ausgelesen:
 cars.get(0);
 cars.get(1);
 ```
+
+### Set
+
+Der Vorteil eines Sets besteht darin, dass es die mathematische Menge abbildet und daher jedes Element nur einmal vorkommen kann.
+Daher kann das selbe Objekt nicht zweimal hinzugefügt werden.
+
+Hier wird das Set, in diesem Fall ein HashSet, initialisiert:
+```java
+Set<String> hash_Set = new HashSet<String>();
+```
+
+Hier werden dem Set nun Elemente hinzugefügt:
+
+```java
+hash_Set.add("Nexus 9396PX");
+hash_Set.add("Nexus 93128TX");
+hash_Set.add("Nexus 9504");
+hash_Set.add("Nexus 9508");
+hash_Set.add("Nexus 9516");
+```
+
+<Aside type="caution" title="Achtung">
+    Sets haben keine get-Methode. Daher müssen Elemente auf andere Art und Weise ausgelesen werden.
+</Aside>
+
+Hier werden die Elemente des Sets mit Hilfe einer for-Schleife ausgelesen:
+
+```java
+for (String setElement : set) {
+    System.out.println(setElement);
+}
+```
